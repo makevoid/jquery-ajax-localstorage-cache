@@ -4,7 +4,7 @@
 $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
 
   // Cache it ?
-  if ( !Modernizr.localstorage || !options.localCache ) return;
+  if ( !localStorage || !options.localCache ) return;
 
   var hourstl = options.cacheTTL || 5;
 
