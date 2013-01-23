@@ -1,5 +1,4 @@
 // github.com/paulirish/jquery-ajax-localstorage-cache
-// dependent on Modernizr's localStorage test
 
 $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
 
@@ -29,7 +28,7 @@ $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
     // parse back to JSON if we can.
     if ( options.dataType.indexOf( 'json' ) === 0 ) value = JSON.parse( value );
     options.success( value );
-    // Abort is broken on JQ 1.5 :(
+    
     jqXHR.abort();
   } else {
 
